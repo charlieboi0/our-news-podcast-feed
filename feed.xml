@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Our News Bahamas Podcast (Edited)</title>
-    <atom:link href="example.com" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://raw.githubusercontent.com/charlieboi0/our-news-podcast-feed/refs/heads/main/feed.xml" rel="self" type="application/rss+xml"/>
     <link>https://github.com/charlieboi0/our-news-podcast-feed</link>
     <description><![CDATA[
       This is an unofficial version of the Our News podcast edited to be more consise. All rights are reserved to Our News Bahamas and Cable Bahamas Ltd. You can find the original podcast <a href="https://podcasts.apple.com/us/podcast/our-news-bahamas-podcast/id1726671326>here on Apple Podcasts</a>.<br><br>
@@ -26,7 +26,7 @@
     </itunes:owner>
     <itunes:block>No</itunes:block>
     <itunes:explicit>false</itunes:explicit>
-    <itunes:new-feed-url>example.com</itunes:new-feed-url>
+    <itunes:new-feed-url>https://raw.githubusercontent.com/charlieboi0/our-news-podcast-feed/refs/heads/main/feed.xml</itunes:new-feed-url>
     <itunes:image href="https://pbcdn1.podbean.com/imglogo/image-logo/17447843/Our_News_Podcast_1_aa5za.jpg"/>
     <image>
       <url>https://pbcdn1.podbean.com/imglogo/image-logo/17447843/Our_News_Podcast_1_aa5za.jpg</url>
