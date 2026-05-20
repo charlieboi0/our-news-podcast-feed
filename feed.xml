@@ -23,11 +23,10 @@
       <i>Our News</i>, your daily one-hour passport to the latest updates and happenings. From breaking news to in-depth features, join us as we navigate through the headlines, providing you with a comprehensive view of the day's events. Stay informed, stay connected – <i>Our News</i> is your trusted source for the pulse of The Bahamas, delivered every day. Visit <a href="https://www.ournews.bs">https://www.ournews.bs</a> for more Bahamas news any time.
     ]]></itunes:summary>
     <itunes:author>Our News Bahamas (Unofficial)</itunes:author>
-    <itunes:category text="News">
-      <itunes:category text="Daily News"/>
-    </itunes:category>
+    <itunes:category text="News"/>
     <itunes:owner>
       <itunes:name>Our News Bahamas (Unofficial)</itunes:name>
+      <itunes:email>charlesm-alias.ecosystem024@slmail.me</itunes:email>
     </itunes:owner>
     <itunes:block>No</itunes:block>
     <itunes:explicit>false</itunes:explicit>
