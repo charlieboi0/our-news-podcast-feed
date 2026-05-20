@@ -1,0 +1,37 @@
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0" xmlns:spotify="http://www.spotify.com/ns/rss" xmlns:podcast="https://podcastindex.org/namespace/1.0" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+<channel>
+  <title>Our News Bahamas Podcast (Edited)</title>
+  <atom:link href="example.com" rel="self" type="application/rss+xml"/>
+  <link>https://github.com/charlieboi0/our-news-podcast-feed</link>
+  <description><![CDATA[
+    This is an unofficial version of the Our News podcast edited to be more consise. All rights are reserved to Our News Bahamas and Cable Bahamas Ltd. You can find the original podcast <a href="https://podcasts.apple.com/us/podcast/our-news-bahamas-podcast/id1726671326>here on Apple Podcasts</a>.<br><br>
+    <i>Our News</i>, your daily one-hour passport to the latest updates and happenings. From breaking news to in-depth features, join us as we navigate through the headlines, providing you with a comprehensive view of the day's events. Stay informed, stay connected – <i>Our News</i> is your trusted source for the pulse of The Bahamas, delivered every day. Visit <a href="https://www.ournews.bs">https://www.ournews.bs</a> for more Bahamas news any time.
+  ]]></description>
+  <language>en-bs</language>
+  <copyright>Copyright ©2024 Our News Bahamas. All rights reserved.</copyright>
+  <category>News:Daily News</category>
+  <ttl>120</ttl>
+  <itunes:type>episodic</itunes:type>
+  <itunes:summary><![CDATA[
+    This is an unofficial version of the Our News podcast edited to be more consise. All rights are reserved to Our News Bahamas and Cable Bahamas Ltd. You can find the original podcast <a href="https://podcasts.apple.com/us/podcast/our-news-bahamas-podcast/id1726671326>here on Apple Podcasts</a>.<br><br>
+    <i>Our News</i>, your daily one-hour passport to the latest updates and happenings. From breaking news to in-depth features, join us as we navigate through the headlines, providing you with a comprehensive view of the day's events. Stay informed, stay connected – <i>Our News</i> is your trusted source for the pulse of The Bahamas, delivered every day. Visit <a href="https://www.ournews.bs">https://www.ournews.bs</a> for more Bahamas news any time.
+  ]]></itunes:summary>
+  <itunes:author>Our News Bahamas (Unofficial)</itunes:author>
+  <itunes:category text="News">
+  <itunes:category text="Daily News"/>
+  </itunes:category>
+  <itunes:owner>
+    <itunes:name>Our News Bahamas (Unofficial)</itunes:name>
+  </itunes:owner>
+  <itunes:block>No</itunes:block>
+  <itunes:explicit>false</itunes:explicit>
+  <itunes:new-feed-url>example.com</itunes:new-feed-url>
+  <itunes:image href="https://pbcdn1.podbean.com/imglogo/image-logo/17447843/Our_News_Podcast_1_aa5za.jpg"/>
+  <image>
+    <url>https://pbcdn1.podbean.com/imglogo/image-logo/17447843/Our_News_Podcast_1_aa5za.jpg</url>
+    <title>Our News Bahamas Podcast (Edited)</title>
+    <link>https://ournewsbahamas.podbean.com</link>
+    <width>144</width>
+    <height>144</height>
+  </image>
+</channel>
