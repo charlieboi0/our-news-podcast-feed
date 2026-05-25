@@ -161,7 +161,7 @@ def create_episode_artifact(episode_num: str, original_item: ET.Element, edited_
         item.remove(enc)
 
     _enclosure = ET.SubElement(item, 'enclosure', {
-        'url': f'https://raw.githubusercontent.com/charlieboi0/repo/main/episodes/{episode_num}/{final_audio_filename}',
+        'url': f'https://charlieboi0.github.io/our-news-podcast-feed/episodes/{episode_num}/{final_audio_filename}',
         'type': 'audio/mpeg',
         'length': str((folder_path / final_audio_filename).stat().st_size)
     })
