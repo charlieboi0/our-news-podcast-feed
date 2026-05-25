@@ -9,5 +9,5 @@ if __name__ == "__main__":
     add_new_episode.add_to_feed()
 
     end_time = time.perf_counter()
-    print(f'\nTime to complete: {(end_time - start_time) // 60:0f}m {(end_time - start_time) % 60:.3f}s')
+    print(f'\nTime to complete: {(end_time - start_time) // 60:.0f}m {(end_time - start_time) % 60:.3f}s')
     

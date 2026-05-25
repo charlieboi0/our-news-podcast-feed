@@ -37,7 +37,7 @@ jobs:
       env:
         MODULATE_API_KEY: ${{ secrets.MODULATE_API_KEY }}
         DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-      run: python main.py
+      run: python -u main.py
 
     - name: Commit and push changes
       run: |
