@@ -1,4 +1,4 @@
-name: Check for episodes
+name: edit-podcast-feed
 
 on:
   schedule:
