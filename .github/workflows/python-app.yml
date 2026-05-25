@@ -34,7 +34,11 @@ jobs:
         sudo apt install ffmpeg
         
     - name: Run main.py
-      run: python scripts/main.py
+      working-directory: scripts
+      env:
+        MODULATE_API_KEY: ${{ secrets.MODULATE_API_KEY }}
+        DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+      run: python main.py
 
     - name: Commit and push changes
       run: |
