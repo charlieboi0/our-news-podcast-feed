@@ -1,27 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss
-  version="2.0"
-  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
-  xmlns:content="http://purl.org/rss/1.0/modules/content/"
-  xmlns:atom="http://www.w3.org/2005/Atom"
->
+<?xml version="1.0" ?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:ns0="http://www.w3.org/2005/Atom" xmlns:ns2="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>Our News Bahamas Podcast (Edited)</title>
-    <atom:link href="https://raw.githubusercontent.com/charlieboi0/our-news-podcast-feed/refs/heads/main/feed.xml" rel="self" type="application/rss+xml"/>
+    <ns0:link href="https://raw.githubusercontent.com/charlieboi0/our-news-podcast-feed/refs/heads/main/feed.xml" rel="self" type="application/rss+xml"/>
     <link>https://github.com/charlieboi0/our-news-podcast-feed</link>
-    <description><![CDATA[
-      This is an unofficial version of the Our News podcast edited to be more consise. All rights are reserved to Our News Bahamas and Cable Bahamas Ltd. You can find the original podcast <a href="https://podcasts.apple.com/us/podcast/our-news-bahamas-podcast/id1726671326">here on Apple Podcasts</a>.<br><br>
-      <i>Our News</i>, your daily one-hour passport to the latest updates and happenings. From breaking news to in-depth features, join us as we navigate through the headlines, providing you with a comprehensive view of the day's events. Stay informed, stay connected – <i>Our News</i> is your trusted source for the pulse of The Bahamas, delivered every day. Visit <a href="https://www.ournews.bs">https://www.ournews.bs</a> for more Bahamas news any time.
-    ]]></description>
+    <description>
+      This is an unofficial version of the Our News podcast edited to be more consise. All rights are reserved to Our News Bahamas and Cable Bahamas Ltd. You can find the original podcast &lt;a href=&quot;https://podcasts.apple.com/us/podcast/our-news-bahamas-podcast/id1726671326&quot;&gt;here on Apple Podcasts&lt;/a&gt;.&lt;br&gt;&lt;br&gt;
+      &lt;i&gt;Our News&lt;/i&gt;, your daily one-hour passport to the latest updates and happenings. From breaking news to in-depth features, join us as we navigate through the headlines, providing you with a comprehensive view of the day's events. Stay informed, stay connected – &lt;i&gt;Our News&lt;/i&gt; is your trusted source for the pulse of The Bahamas, delivered every day. Visit &lt;a href=&quot;https://www.ournews.bs&quot;&gt;https://www.ournews.bs&lt;/a&gt; for more Bahamas news any time.
+    </description>
     <language>en-bs</language>
     <copyright>Copyright ©2024 Our News Bahamas. All rights reserved.</copyright>
     <category>News:Daily News</category>
     <ttl>120</ttl>
     <itunes:type>episodic</itunes:type>
-    <itunes:summary><![CDATA[
-      This is an unofficial version of the Our News podcast edited to be more consise. All rights are reserved to Our News Bahamas and Cable Bahamas Ltd. You can find the original podcast <a href="https://podcasts.apple.com/us/podcast/our-news-bahamas-podcast/id1726671326">here on Apple Podcasts</a>.<br><br>
-      <i>Our News</i>, your daily one-hour passport to the latest updates and happenings. From breaking news to in-depth features, join us as we navigate through the headlines, providing you with a comprehensive view of the day's events. Stay informed, stay connected – <i>Our News</i> is your trusted source for the pulse of The Bahamas, delivered every day. Visit <a href="https://www.ournews.bs">https://www.ournews.bs</a> for more Bahamas news any time.
-    ]]></itunes:summary>
+    <itunes:summary>
+      This is an unofficial version of the Our News podcast edited to be more consise. All rights are reserved to Our News Bahamas and Cable Bahamas Ltd. You can find the original podcast &lt;a href=&quot;https://podcasts.apple.com/us/podcast/our-news-bahamas-podcast/id1726671326&quot;&gt;here on Apple Podcasts&lt;/a&gt;.&lt;br&gt;&lt;br&gt;
+      &lt;i&gt;Our News&lt;/i&gt;, your daily one-hour passport to the latest updates and happenings. From breaking news to in-depth features, join us as we navigate through the headlines, providing you with a comprehensive view of the day's events. Stay informed, stay connected – &lt;i&gt;Our News&lt;/i&gt; is your trusted source for the pulse of The Bahamas, delivered every day. Visit &lt;a href=&quot;https://www.ournews.bs&quot;&gt;https://www.ournews.bs&lt;/a&gt; for more Bahamas news any time.
+    </itunes:summary>
     <itunes:author>Our News Bahamas (Unofficial)</itunes:author>
     <itunes:category text="News"/>
     <itunes:owner>
@@ -39,5 +34,35 @@
       <width>144</width>
       <height>144</height>
     </image>
+    <item>
+      <title>Eight-Year-Old Boy Airlifted to Florida After Suffering Serious Head Injuries in North Bimini Shooting — Sunday, May 24th, 2026</title>
+      <itunes:title>Eight-Year-Old Boy Airlifted to Florida After Suffering Serious Head Injuries in North Bimini Shooting — Sunday, May 24th, 2026</itunes:title>
+      <link>https://ournewsbahamas.podbean.com/e/eight-year-old-boy-airlifted-to-florida-after-suffering-serious-head-injuries-in-north-bimini-shooting-%e2%80%94-sunday-may-24th-2026/</link>
+      <comments>https://ournewsbahamas.podbean.com/e/eight-year-old-boy-airlifted-to-florida-after-suffering-serious-head-injuries-in-north-bimini-shooting-%e2%80%94-sunday-may-24th-2026/#comments</comments>
+      <pubDate>Sun, 24 May 2026 20:00:00 -0400</pubDate>
+      <guid isPermaLink="false">ournewsbahamas.podbean.com/c621aa60-55d1-3aa1-ba3d-5c9506eea1c4</guid>
+      <description>
+Tonight on Our News Weekend, a community is in shock after an eight-year-old boy is airlifted for emergency treatment following a tragic shooting in North Bimini. We dive into the political fallout as a former House Speaker reveals what he believes triggered a crushing election defeat and calls for major electoral reform. Our team also follows the US Ambassador’s visit to BTVI to expand student opportunities and takes you under the waves for the unveiling of Grand Bahama’s first underwater sculpture museum. Watch the full broadcast for these stories, a record-shattering performance from Devyn Charlton, and a special look at the mental health legacy of Hurricane Dorian.
+-----
+Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for &quot;fair use&quot; for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research. Fair use is a use permitted by copyright statute that might otherwise be infringing.
+</description>
+      <ns2:encoded>
+Tonight on Our News Weekend, a community is in shock after an eight-year-old boy is airlifted for emergency treatment following a tragic shooting in North Bimini. We dive into the political fallout as a former House Speaker reveals what he believes triggered a crushing election defeat and calls for major electoral reform. Our team also follows the US Ambassador’s visit to BTVI to expand student opportunities and takes you under the waves for the unveiling of Grand Bahama’s first underwater sculpture museum. Watch the full broadcast for these stories, a record-shattering performance from Devyn Charlton, and a special look at the mental health legacy of Hurricane Dorian.
+-----
+Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for &quot;fair use&quot; for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research. Fair use is a use permitted by copyright statute that might otherwise be infringing.
+</ns2:encoded>
+      <itunes:summary>
+Tonight on Our News Weekend, a community is in shock after an eight-year-old boy is airlifted for emergency treatment following a tragic shooting in North Bimini. We dive into the political fallout as a former House Speaker reveals what he believes triggered a crushing election defeat and calls for major electoral reform. Our team also follows the US Ambassador’s visit to BTVI to expand student opportunities and takes you under the waves for the unveiling of Grand Bahama’s first underwater sculpture museum. Watch the full broadcast for these stories, a record-shattering performance from Devyn Charlton, and a special look at the mental health legacy of Hurricane Dorian.
+-----
+Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for &quot;fair use&quot; for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research. Fair use is a use permitted by copyright statute that might otherwise be infringing.
+</itunes:summary>
+      <itunes:author>Our News Bahamas</itunes:author>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:block>No</itunes:block>
+      <itunes:episode>938</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <enclosure url="https://raw.githubusercontent.com/charlieboi0/repo/main/episodes/938/episode_938.mp3" type="audio/mpeg" length="17745546"/>
+      <itunes:duration>1109</itunes:duration>
+    </item>
   </channel>
 </rss>
