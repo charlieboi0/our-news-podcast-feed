@@ -1,12 +1,25 @@
-<?xml version="1.0" ?>
-<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:ns0="http://www.w3.org/2005/Atom" xmlns:ns2="http://purl.org/rss/1.0/modules/content/" version="2.0">
+<?xml version="1.0"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:ns0="http://www.w3.org/2005/Atom" xmlns:ns2="http://purl.org/rss/1.0/modules/content/"
+  version="2.0">
   <channel>
     <title>Our News Bahamas Podcast (Edited)</title>
-    <ns0:link href="https://raw.githubusercontent.com/charlieboi0/our-news-podcast-feed/refs/heads/main/feed.xml" rel="self" type="application/rss+xml"/>
+    <ns0:link href="https://charlieboi0.github.io/our-news-podcast-feed/feed.xml" rel="self"
+      type="application/rss+xml" />
     <link>https://github.com/charlieboi0/our-news-podcast-feed</link>
     <description>
-      This is an unofficial version of the Our News podcast edited to be more consise. All rights are reserved to Our News Bahamas and Cable Bahamas Ltd. You can find the original podcast &lt;a href=&quot;https://podcasts.apple.com/us/podcast/our-news-bahamas-podcast/id1726671326&quot;&gt;here on Apple Podcasts&lt;/a&gt;.&lt;br&gt;&lt;br&gt;
-      &lt;i&gt;Our News&lt;/i&gt;, your daily one-hour passport to the latest updates and happenings. From breaking news to in-depth features, join us as we navigate through the headlines, providing you with a comprehensive view of the day's events. Stay informed, stay connected – &lt;i&gt;Our News&lt;/i&gt; is your trusted source for the pulse of The Bahamas, delivered every day. Visit &lt;a href=&quot;https://www.ournews.bs&quot;&gt;https://www.ournews.bs&lt;/a&gt; for more Bahamas news any time.
+      This is an unofficial version of the Our News podcast edited to be more consise. All rights
+      are reserved to Our News Bahamas and Cable Bahamas Ltd. You can find the original podcast
+      &lt;a
+      href=&quot;https://podcasts.apple.com/us/podcast/our-news-bahamas-podcast/id1726671326&quot;&gt;here
+      on Apple Podcasts&lt;/a&gt;.&lt;br&gt;&lt;br&gt;
+      &lt;i&gt;Our News&lt;/i&gt;, your daily one-hour passport to the latest updates and
+      happenings. From breaking news to in-depth features, join us as we navigate through the
+      headlines, providing you with a comprehensive view of the day's events. Stay informed, stay
+      connected – &lt;i&gt;Our News&lt;/i&gt; is your trusted source for the pulse of The Bahamas,
+      delivered every day. Visit &lt;a
+      href=&quot;https://www.ournews.bs&quot;&gt;https://www.ournews.bs&lt;/a&gt; for more Bahamas
+      news any time.
     </description>
     <language>en-bs</language>
     <copyright>Copyright ©2024 Our News Bahamas. All rights reserved.</copyright>
@@ -14,19 +27,30 @@
     <ttl>120</ttl>
     <itunes:type>episodic</itunes:type>
     <itunes:summary>
-      This is an unofficial version of the Our News podcast edited to be more consise. All rights are reserved to Our News Bahamas and Cable Bahamas Ltd. You can find the original podcast &lt;a href=&quot;https://podcasts.apple.com/us/podcast/our-news-bahamas-podcast/id1726671326&quot;&gt;here on Apple Podcasts&lt;/a&gt;.&lt;br&gt;&lt;br&gt;
-      &lt;i&gt;Our News&lt;/i&gt;, your daily one-hour passport to the latest updates and happenings. From breaking news to in-depth features, join us as we navigate through the headlines, providing you with a comprehensive view of the day's events. Stay informed, stay connected – &lt;i&gt;Our News&lt;/i&gt; is your trusted source for the pulse of The Bahamas, delivered every day. Visit &lt;a href=&quot;https://www.ournews.bs&quot;&gt;https://www.ournews.bs&lt;/a&gt; for more Bahamas news any time.
+      This is an unofficial version of the Our News podcast edited to be more consise. All rights
+      are reserved to Our News Bahamas and Cable Bahamas Ltd. You can find the original podcast
+      &lt;a
+      href=&quot;https://podcasts.apple.com/us/podcast/our-news-bahamas-podcast/id1726671326&quot;&gt;here
+      on Apple Podcasts&lt;/a&gt;.&lt;br&gt;&lt;br&gt;
+      &lt;i&gt;Our News&lt;/i&gt;, your daily one-hour passport to the latest updates and
+      happenings. From breaking news to in-depth features, join us as we navigate through the
+      headlines, providing you with a comprehensive view of the day's events. Stay informed, stay
+      connected – &lt;i&gt;Our News&lt;/i&gt; is your trusted source for the pulse of The Bahamas,
+      delivered every day. Visit &lt;a
+      href=&quot;https://www.ournews.bs&quot;&gt;https://www.ournews.bs&lt;/a&gt; for more Bahamas
+      news any time.
     </itunes:summary>
     <itunes:author>Our News Bahamas (Unofficial)</itunes:author>
-    <itunes:category text="News"/>
+    <itunes:category text="News" />
     <itunes:owner>
       <itunes:name>Our News Bahamas (Unofficial)</itunes:name>
       <itunes:email>charlesm-alias.ecosystem024@slmail.me</itunes:email>
     </itunes:owner>
     <itunes:block>No</itunes:block>
     <itunes:explicit>false</itunes:explicit>
-    <itunes:new-feed-url>https://raw.githubusercontent.com/charlieboi0/our-news-podcast-feed/refs/heads/main/feed.xml</itunes:new-feed-url>
-    <itunes:image href="https://pbcdn1.podbean.com/imglogo/image-logo/17447843/Our_News_Podcast_1_aa5za.jpg"/>
+    <itunes:new-feed-url>https://charlieboi0.github.io/our-news-podcast-feed/feed.xml</itunes:new-feed-url>
+    <itunes:image
+      href="https://pbcdn1.podbean.com/imglogo/image-logo/17447843/Our_News_Podcast_1_aa5za.jpg" />
     <image>
       <url>https://pbcdn1.podbean.com/imglogo/image-logo/17447843/Our_News_Podcast_1_aa5za.jpg</url>
       <title>Our News Bahamas Podcast (Edited)</title>
@@ -35,63 +59,137 @@
       <height>144</height>
     </image>
     <item>
-      <title>Eight-Year-Old Boy Airlifted to Florida After Suffering Serious Head Injuries in North Bimini Shooting — Sunday, May 24th, 2026</title>
-      <itunes:title>Eight-Year-Old Boy Airlifted to Florida After Suffering Serious Head Injuries in North Bimini Shooting — Sunday, May 24th, 2026</itunes:title>
-      <link>https://ournewsbahamas.podbean.com/e/eight-year-old-boy-airlifted-to-florida-after-suffering-serious-head-injuries-in-north-bimini-shooting-%e2%80%94-sunday-may-24th-2026/</link>
-      <comments>https://ournewsbahamas.podbean.com/e/eight-year-old-boy-airlifted-to-florida-after-suffering-serious-head-injuries-in-north-bimini-shooting-%e2%80%94-sunday-may-24th-2026/#comments</comments>
+      <title>Eight-Year-Old Boy Airlifted to Florida After Suffering Serious Head Injuries in North
+        Bimini Shooting — Sunday, May 24th, 2026</title>
+      <itunes:title>Eight-Year-Old Boy Airlifted to Florida After Suffering Serious Head Injuries in
+        North Bimini Shooting — Sunday, May 24th, 2026</itunes:title>
+      <link>https://archive.org/download/our-news-podcast-unofficial/episode_938.mp3</link>
+      <comments>
+        https://ournewsbahamas.podbean.com/e/eight-year-old-boy-airlifted-to-florida-after-suffering-serious-head-injuries-in-north-bimini-shooting-%e2%80%94-sunday-may-24th-2026/#comments</comments>
       <pubDate>Sun, 24 May 2026 20:00:00 -0400</pubDate>
       <guid isPermaLink="false">ournewsbahamas.podbean.com/c621aa60-55d1-3aa1-ba3d-5c9506eea1c4</guid>
       <description>
-Tonight on Our News Weekend, a community is in shock after an eight-year-old boy is airlifted for emergency treatment following a tragic shooting in North Bimini. We dive into the political fallout as a former House Speaker reveals what he believes triggered a crushing election defeat and calls for major electoral reform. Our team also follows the US Ambassador’s visit to BTVI to expand student opportunities and takes you under the waves for the unveiling of Grand Bahama’s first underwater sculpture museum. Watch the full broadcast for these stories, a record-shattering performance from Devyn Charlton, and a special look at the mental health legacy of Hurricane Dorian.
------
-Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for &quot;fair use&quot; for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research. Fair use is a use permitted by copyright statute that might otherwise be infringing.
+        Tonight on Our News Weekend, a community is in shock after an eight-year-old boy is
+        airlifted for emergency treatment following a tragic shooting in North Bimini. We dive into
+        the political fallout as a former House Speaker reveals what he believes triggered a
+        crushing election defeat and calls for major electoral reform. Our team also follows the US
+        Ambassador’s visit to BTVI to expand student opportunities and takes you under the waves for
+        the unveiling of Grand Bahama’s first underwater sculpture museum. Watch the full broadcast
+        for these stories, a record-shattering performance from Devyn Charlton, and a special look
+        at the mental health legacy of Hurricane Dorian.
+        -----
+        Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for
+        &quot;fair use&quot; for purposes such as criticism, comment, news reporting, teaching,
+        scholarship, education and research. Fair use is a use permitted by copyright statute that
+        might otherwise be infringing.
 </description>
       <ns2:encoded>
-Tonight on Our News Weekend, a community is in shock after an eight-year-old boy is airlifted for emergency treatment following a tragic shooting in North Bimini. We dive into the political fallout as a former House Speaker reveals what he believes triggered a crushing election defeat and calls for major electoral reform. Our team also follows the US Ambassador’s visit to BTVI to expand student opportunities and takes you under the waves for the unveiling of Grand Bahama’s first underwater sculpture museum. Watch the full broadcast for these stories, a record-shattering performance from Devyn Charlton, and a special look at the mental health legacy of Hurricane Dorian.
------
-Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for &quot;fair use&quot; for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research. Fair use is a use permitted by copyright statute that might otherwise be infringing.
+        Tonight on Our News Weekend, a community is in shock after an eight-year-old boy is
+        airlifted for emergency treatment following a tragic shooting in North Bimini. We dive into
+        the political fallout as a former House Speaker reveals what he believes triggered a
+        crushing election defeat and calls for major electoral reform. Our team also follows the US
+        Ambassador’s visit to BTVI to expand student opportunities and takes you under the waves for
+        the unveiling of Grand Bahama’s first underwater sculpture museum. Watch the full broadcast
+        for these stories, a record-shattering performance from Devyn Charlton, and a special look
+        at the mental health legacy of Hurricane Dorian.
+        -----
+        Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for
+        &quot;fair use&quot; for purposes such as criticism, comment, news reporting, teaching,
+        scholarship, education and research. Fair use is a use permitted by copyright statute that
+        might otherwise be infringing.
 </ns2:encoded>
       <itunes:summary>
-Tonight on Our News Weekend, a community is in shock after an eight-year-old boy is airlifted for emergency treatment following a tragic shooting in North Bimini. We dive into the political fallout as a former House Speaker reveals what he believes triggered a crushing election defeat and calls for major electoral reform. Our team also follows the US Ambassador’s visit to BTVI to expand student opportunities and takes you under the waves for the unveiling of Grand Bahama’s first underwater sculpture museum. Watch the full broadcast for these stories, a record-shattering performance from Devyn Charlton, and a special look at the mental health legacy of Hurricane Dorian.
------
-Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for &quot;fair use&quot; for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research. Fair use is a use permitted by copyright statute that might otherwise be infringing.
+        Tonight on Our News Weekend, a community is in shock after an eight-year-old boy is
+        airlifted for emergency treatment following a tragic shooting in North Bimini. We dive into
+        the political fallout as a former House Speaker reveals what he believes triggered a
+        crushing election defeat and calls for major electoral reform. Our team also follows the US
+        Ambassador’s visit to BTVI to expand student opportunities and takes you under the waves for
+        the unveiling of Grand Bahama’s first underwater sculpture museum. Watch the full broadcast
+        for these stories, a record-shattering performance from Devyn Charlton, and a special look
+        at the mental health legacy of Hurricane Dorian.
+        -----
+        Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for
+        &quot;fair use&quot; for purposes such as criticism, comment, news reporting, teaching,
+        scholarship, education and research. Fair use is a use permitted by copyright statute that
+        might otherwise be infringing.
 </itunes:summary>
       <itunes:author>Our News Bahamas</itunes:author>
       <itunes:explicit>false</itunes:explicit>
       <itunes:block>No</itunes:block>
       <itunes:episode>938</itunes:episode>
       <itunes:episodeType>full</itunes:episodeType>
-      <enclosure url="https://charlieboi0.github.io/our-news-podcast-feed/episodes/938/episode_938.mp3" type="audio/mpeg" length="17712109"/>
+      <enclosure
+        url="https://charlieboi0.github.io/our-news-podcast-feed/episodes/938/episode_938.mp3"
+        type="audio/mpeg" length="17712109" />
       <itunes:duration>1107</itunes:duration>
     </item>
     <item>
-      <title>Body of Missing 56-Year-Old Barbara Lewis Discovered in Grand Bahama Following Intensive Search — Monday, May 25th, 2026</title>
-      <itunes:title>Body of Missing 56-Year-Old Barbara Lewis Discovered in Grand Bahama Following Intensive Search — Monday, May 25th, 2026</itunes:title>
-      <link>https://ournewsbahamas.podbean.com/e/body-of-missing-56-year-old-barbara-lewis-discovered-in-grand-bahama-following-intensive-search-%e2%80%94-monday-may-25th-2026/</link>
-      <comments>https://ournewsbahamas.podbean.com/e/body-of-missing-56-year-old-barbara-lewis-discovered-in-grand-bahama-following-intensive-search-%e2%80%94-monday-may-25th-2026/#comments</comments>
+      <title>Body of Missing 56-Year-Old Barbara Lewis Discovered in Grand Bahama Following
+        Intensive Search — Monday, May 25th, 2026</title>
+      <itunes:title>Body of Missing 56-Year-Old Barbara Lewis Discovered in Grand Bahama Following
+        Intensive Search — Monday, May 25th, 2026</itunes:title>
+      <link>
+        https://archive.org/download/our-news-podcast-unofficial/episode_939.mp3</link>
+      <comments>
+        https://ournewsbahamas.podbean.com/e/body-of-missing-56-year-old-barbara-lewis-discovered-in-grand-bahama-following-intensive-search-%e2%80%94-monday-may-25th-2026/#comments</comments>
       <pubDate>Mon, 25 May 2026 20:00:00 -0400</pubDate>
       <guid isPermaLink="false">ournewsbahamas.podbean.com/95f3613a-a928-3365-ac65-4e1a38619f80</guid>
       <description>
-Tonight on Our News, a community in Grand Bahama is left searching for answers after the tragic discovery of a missing woman's body, while police in Eleuthera investigate a separate death involving a man found in coastal waters. We bring you the latest developments on the eight-year-old shooting victim receiving emergency treatment in the US and the national security minister’s stern warning on firearm safety. Our team also looks into the possibility of a new &quot;conch season&quot; following a troubling report on overfishing and details a fresh police alert regarding fraudulent government payment scams. Stay tuned for the full broadcast to catch an inspiring story of youth outreach in our high schools and your complete national weather forecast.
------
-Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for &quot;fair use&quot; for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research. Fair use is a use permitted by copyright statute that might otherwise be infringing.
+        Tonight on Our News, a community in Grand Bahama is left searching for answers after the
+        tragic discovery of a missing woman's body, while police in Eleuthera investigate a separate
+        death involving a man found in coastal waters. We bring you the latest developments on the
+        eight-year-old shooting victim receiving emergency treatment in the US and the national
+        security minister’s stern warning on firearm safety. Our team also looks into the
+        possibility of a new &quot;conch season&quot; following a troubling report on overfishing
+        and details a fresh police alert regarding fraudulent government payment scams. Stay tuned
+        for the full broadcast to catch an inspiring story of youth outreach in our high schools and
+        your complete national weather forecast.
+        -----
+        Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for
+        &quot;fair use&quot; for purposes such as criticism, comment, news reporting, teaching,
+        scholarship, education and research. Fair use is a use permitted by copyright statute that
+        might otherwise be infringing.
 </description>
       <ns2:encoded>
-Tonight on Our News, a community in Grand Bahama is left searching for answers after the tragic discovery of a missing woman's body, while police in Eleuthera investigate a separate death involving a man found in coastal waters. We bring you the latest developments on the eight-year-old shooting victim receiving emergency treatment in the US and the national security minister’s stern warning on firearm safety. Our team also looks into the possibility of a new &quot;conch season&quot; following a troubling report on overfishing and details a fresh police alert regarding fraudulent government payment scams. Stay tuned for the full broadcast to catch an inspiring story of youth outreach in our high schools and your complete national weather forecast.
------
-Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for &quot;fair use&quot; for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research. Fair use is a use permitted by copyright statute that might otherwise be infringing.
+        Tonight on Our News, a community in Grand Bahama is left searching for answers after the
+        tragic discovery of a missing woman's body, while police in Eleuthera investigate a separate
+        death involving a man found in coastal waters. We bring you the latest developments on the
+        eight-year-old shooting victim receiving emergency treatment in the US and the national
+        security minister’s stern warning on firearm safety. Our team also looks into the
+        possibility of a new &quot;conch season&quot; following a troubling report on overfishing
+        and details a fresh police alert regarding fraudulent government payment scams. Stay tuned
+        for the full broadcast to catch an inspiring story of youth outreach in our high schools and
+        your complete national weather forecast.
+        -----
+        Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for
+        &quot;fair use&quot; for purposes such as criticism, comment, news reporting, teaching,
+        scholarship, education and research. Fair use is a use permitted by copyright statute that
+        might otherwise be infringing.
 </ns2:encoded>
       <itunes:summary>
-Tonight on Our News, a community in Grand Bahama is left searching for answers after the tragic discovery of a missing woman's body, while police in Eleuthera investigate a separate death involving a man found in coastal waters. We bring you the latest developments on the eight-year-old shooting victim receiving emergency treatment in the US and the national security minister’s stern warning on firearm safety. Our team also looks into the possibility of a new &quot;conch season&quot; following a troubling report on overfishing and details a fresh police alert regarding fraudulent government payment scams. Stay tuned for the full broadcast to catch an inspiring story of youth outreach in our high schools and your complete national weather forecast.
------
-Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for &quot;fair use&quot; for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research. Fair use is a use permitted by copyright statute that might otherwise be infringing.
+        Tonight on Our News, a community in Grand Bahama is left searching for answers after the
+        tragic discovery of a missing woman's body, while police in Eleuthera investigate a separate
+        death involving a man found in coastal waters. We bring you the latest developments on the
+        eight-year-old shooting victim receiving emergency treatment in the US and the national
+        security minister’s stern warning on firearm safety. Our team also looks into the
+        possibility of a new &quot;conch season&quot; following a troubling report on overfishing
+        and details a fresh police alert regarding fraudulent government payment scams. Stay tuned
+        for the full broadcast to catch an inspiring story of youth outreach in our high schools and
+        your complete national weather forecast.
+        -----
+        Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for
+        &quot;fair use&quot; for purposes such as criticism, comment, news reporting, teaching,
+        scholarship, education and research. Fair use is a use permitted by copyright statute that
+        might otherwise be infringing.
 </itunes:summary>
       <itunes:author>Our News Bahamas</itunes:author>
       <itunes:explicit>false</itunes:explicit>
       <itunes:block>No</itunes:block>
       <itunes:episode>939</itunes:episode>
       <itunes:episodeType>full</itunes:episodeType>
-      <enclosure url="https://charlieboi0.github.io/our-news-podcast-feed/episodes/939/episode_939.mp3" type="audio/mpeg" length="14971133"/>
+      <enclosure
+        url="https://charlieboi0.github.io/our-news-podcast-feed/episodes/939/episode_939.mp3"
+        type="audio/mpeg" length="14971133" />
       <itunes:duration>936</itunes:duration>
     </item>
   </channel>
