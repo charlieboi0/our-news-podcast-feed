@@ -16,6 +16,9 @@ SOURCE_FEED_URL = "https://example.com/source-local-news-feed.xml"
 
 MODULATE_API_KEY = os.getenv("MODULATE_API_KEY")
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
+IA_ACCESS_KEY = os.getenv("IA_ACCESS_KEY")
+IA_SECRET_KEY = os.getenv("IA_SECRET_KEY")
+IA_ITEM_NAME = 'our-news-podcast-unofficial'
 
 NAMESPACES = {
     'content': 'http://purl.org/rss/1.0/modules/content/',
