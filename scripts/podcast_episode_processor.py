@@ -6,6 +6,7 @@ import shutil
 import xml.etree.ElementTree as ET
 import requests
 from pydub import AudioSegment
+import internetarchive as ia
 import config
 
 SOURCE_FEED_URL = 'https://feed.podbean.com/ournewsbahamas/feed.xml'
@@ -74,7 +75,6 @@ def update_state(success: bool):
         state['next_allowed_attempt'] = tomorrow_target.isoformat()
     else:
         # If failed within the window, let the next cron invocation (30 mins) run immediately
-        
         state['next_allowed_attempt'] = now.isoformat()
 
     with open(config.STATE_FILE, 'w') as f:
@@ -93,16 +93,25 @@ def transcribe_audio(audio_path: Path) -> list:
     response.raise_for_status()
     return response.json()
 
-def get_edit_segments(word_timestamps: list) -> list:
+def get_edit_segments(word_timestamps: list) -> tuple[str | None, list]:
+    """
+    Returns a tuple of (new_title, list of segments to keep) based on the provided word timestamps.
+    """
     prompt = (
-        'You are an expert audio editor analyzing a local news podcast. '
-        'Review the provided transcription json with utterances and their timestamps. Identify and exclude these segments: '
-        'weather segments, the \'World Focus\' segment, the \'This day in history\' segment, '
-        'duplicate sports segments, and commercials.\n'
-        'Return a JSON object representing the valid content segments to KEEP. '
-        'All timestamps should be in seconds and everything should be properly sorted. Format:\n'
+        'You are an audio editor analyzing a local news podcast. \n'
+
+        'Review the provided transcription json with utterances and their timestamps.'
+        'Identify and exclude these segments: weather segments, the \'World Focus\' '
+        'segment, the \'This day in history\' segment, duplicate sports segments, and '
+        'commercials. In addition, generate an new title for the edited podcast. '
+        'The title should briefly summarize the most important stories and be no '
+        'longer than 40 characters. Return a JSON object representing the new title and '
+        'the valid content segments to KEEP. All timestamps should be in seconds and '
+        'everything should be properly sorted. Format:\n'
+
         '{\n'
-        '    segments: [{"start": float, "end": float}]\n'
+        '    "title": string,\n'
+        '    "segments": [{"start": float, "end": float}]\n'
         '}\n'
     )
     
@@ -128,7 +137,8 @@ def get_edit_segments(word_timestamps: list) -> list:
     result = response.json()
     
     content = result['choices'][0]['message']['content']
-    return json.loads(content).get('segments', [])
+    parsed_content = json.loads(content)
+    return parsed_content.get('title'), parsed_content.get('segments', [])
 
 def edit_audio(input_path: Path, output_path: Path, segments: list):
     audio = AudioSegment.from_mp3(input_path)
@@ -141,13 +151,40 @@ def edit_audio(input_path: Path, output_path: Path, segments: list):
         
     edited_audio.export(output_path, format='mp3')
 
+def upload_to_archive_org(audio_path: Path, episode_num: str) -> tuple[str, int]:
+    """
+    Upload audio to archive.org and return (archive_url, file_size)
+    """
+    ia.configure(config.IA_ACCESS_KEY, config.IA_SECRET_KEY)
+    
+    audio_filename = f'episode_{episode_num}.mp3'
+    
+    item = ia.get_item(config.IA_ITEM_NAME)
+    
+    # Upload the file
+    r = item.upload_file(str(audio_path), file_metadata={
+        'mediatype': 'audio',
+        'collection': 'podcasts',
+        'title': f'Our News Podcast (Unofficial) - Episode {episode_num}',
+        'date': datetime.datetime.now().strftime('%Y-%m-%d'),
+        'creator': 'Charles M',
+        'language': 'English',
+    }, rename=audio_filename, access_key=config.IA_ACCESS_KEY, secret_key=config.IA_SECRET_KEY)
+    
+    r.raise_for_status()
+    
+    archive_url = f'https://archive.org/download/{config.IA_ITEM_NAME}/{audio_filename}'
+    file_size = audio_path.stat().st_size
+    
+    return archive_url, file_size
+
 def create_episode_artifact(episode_num: str, original_item: ET.Element, edited_audio_path: Path):
     folder_path = config.PATH_TO_EPISODES / episode_num
     folder_path.mkdir(parents=True, exist_ok=True)
     
-    # Save processed audio
-    final_audio_filename = f'episode_{episode_num}.mp3'
-    edited_audio_path.rename(folder_path / final_audio_filename)
+    # Upload audio to archive.org
+    print(f'Uploading episode {episode_num} to archive.org...')
+    archive_url, file_size = upload_to_archive_org(edited_audio_path, episode_num)
     
     # Construct isolated RSS item tag block
     rss_attrs = {'version': '2.0'} | {f'xmlns:{key}': val for key, val in config.NAMESPACES.items()}
@@ -161,12 +198,12 @@ def create_episode_artifact(episode_num: str, original_item: ET.Element, edited_
         item.remove(enc)
 
     _enclosure = ET.SubElement(item, 'enclosure', {
-        'url': f'https://charlieboi0.github.io/our-news-podcast-feed/episodes/{episode_num}/{final_audio_filename}',
+        'url': archive_url,
         'type': 'audio/mpeg',
-        'length': str((folder_path / final_audio_filename).stat().st_size)
+        'length': str(file_size)
     })
 
-    audio = AudioSegment.from_mp3(folder_path / final_audio_filename)
+    audio = AudioSegment.from_mp3(edited_audio_path)
     duration_secs = len(audio) / 1000
 
     itunes_duration_elem = item.find('itunes:duration', config.NAMESPACES)
@@ -242,15 +279,22 @@ def process_latest_podcast():
             'duration_secs': utterance['duration_ms'] / 1000
         } for utterance in transcription.get('utterances', [])]
 
+        print(transcription)
+
         if utterances == []:
             raise ValueError('Missing utterances in transcription response')
 
         print('Isolating content gaps with DeepSeek...')
-        keep_segments = get_edit_segments(utterances)
+        new_title, keep_segments = get_edit_segments(utterances)
+
+        latest_title_elem = latest_entry.find('title')
+        latest_title_elem.text = new_title if new_title else latest_title_elem.text
 
         if not keep_segments:
             raise ValueError('No valid segments returned from Deepseek')
         
+        print(keep_segments)
+
         print('Slicing linear audio tracks...')
         edit_audio(temp_input, temp_output, keep_segments)
 
