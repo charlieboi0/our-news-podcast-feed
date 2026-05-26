@@ -1,11 +1,8 @@
-<?xml version="1.0"?>
-<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
-  xmlns:ns0="http://www.w3.org/2005/Atom" xmlns:ns2="http://purl.org/rss/1.0/modules/content/"
-  version="2.0">
+<?xml version="1.0" ?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:ns0="http://www.w3.org/2005/Atom" xmlns:ns2="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>Our News Bahamas Podcast (Edited)</title>
-    <ns0:link href="https://charlieboi0.github.io/our-news-podcast-feed/feed.xml" rel="self"
-      type="application/rss+xml" />
+    <ns0:link href="https://charlieboi0.github.io/our-news-podcast-feed/feed.xml" rel="self" type="application/rss+xml"/>
     <link>https://github.com/charlieboi0/our-news-podcast-feed</link>
     <description>
       This is an unofficial version of the Our News podcast edited to be more consise. All rights
@@ -41,7 +38,7 @@
       news any time.
     </itunes:summary>
     <itunes:author>Our News Bahamas (Unofficial)</itunes:author>
-    <itunes:category text="News" />
+    <itunes:category text="News"/>
     <itunes:owner>
       <itunes:name>Our News Bahamas (Unofficial)</itunes:name>
       <itunes:email>charlesm-alias.ecosystem024@slmail.me</itunes:email>
@@ -49,8 +46,7 @@
     <itunes:block>No</itunes:block>
     <itunes:explicit>false</itunes:explicit>
     <itunes:new-feed-url>https://charlieboi0.github.io/our-news-podcast-feed/feed.xml</itunes:new-feed-url>
-    <itunes:image
-      href="https://pbcdn1.podbean.com/imglogo/image-logo/17447843/Our_News_Podcast_1_aa5za.jpg" />
+    <itunes:image href="https://pbcdn1.podbean.com/imglogo/image-logo/17447843/Our_News_Podcast_1_aa5za.jpg"/>
     <image>
       <url>https://pbcdn1.podbean.com/imglogo/image-logo/17447843/Our_News_Podcast_1_aa5za.jpg</url>
       <title>Our News Bahamas Podcast (Edited)</title>
@@ -118,9 +114,7 @@
       <itunes:block>No</itunes:block>
       <itunes:episode>938</itunes:episode>
       <itunes:episodeType>full</itunes:episodeType>
-      <enclosure
-        url="https://charlieboi0.github.io/our-news-podcast-feed/episodes/938/episode_938.mp3"
-        type="audio/mpeg" length="17712109" />
+      <enclosure url="https://charlieboi0.github.io/our-news-podcast-feed/episodes/938/episode_938.mp3" type="audio/mpeg" length="17712109"/>
       <itunes:duration>1107</itunes:duration>
     </item>
     <item>
@@ -187,9 +181,7 @@
       <itunes:block>No</itunes:block>
       <itunes:episode>939</itunes:episode>
       <itunes:episodeType>full</itunes:episodeType>
-      <enclosure
-        url="https://charlieboi0.github.io/our-news-podcast-feed/episodes/939/episode_939.mp3"
-        type="audio/mpeg" length="14971133" />
+      <enclosure url="https://charlieboi0.github.io/our-news-podcast-feed/episodes/939/episode_939.mp3" type="audio/mpeg" length="14971133"/>
       <itunes:duration>936</itunes:duration>
     </item>
   </channel>
