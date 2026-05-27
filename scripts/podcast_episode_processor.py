@@ -216,10 +216,13 @@ def create_episode_artifact(episode_num: str, original_item: ET.Element, edited_
     tree = ET.ElementTree(rss)
     tree.write(folder_path / 'metadata.xml', encoding='utf-8', xml_declaration=True)
 
-def process_latest_podcast():
-    if not should_execute():
+def process_latest_podcast(skip_execute_check: bool):
+    if not skip_execute_check and not should_execute():
         print('Criteria skipped: Execution window inactive or 24h threshold already met.')
         return
+
+    if skip_execute_check:
+        print('Skipping execute check')
 
     if shutil.which('ffmpeg') is None:
         raise RuntimeError('ffmpeg is not installed')
