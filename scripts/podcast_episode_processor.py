@@ -155,6 +155,9 @@ def upload_to_archive_org(audio_path: Path, episode_num: str) -> tuple[str, int]
     """
     Upload audio to archive.org and return (archive_url, file_size)
     """
+    if not config.IA_ACCESS_KEY or not config.IA_SECRET_KEY:
+        raise RuntimeError('IA_ACCESS_KEY and IA_SECRET_KEY are required for archive.org upload')
+
     ia.configure(config.IA_ACCESS_KEY, config.IA_SECRET_KEY)
     
     audio_filename = f'episode_{episode_num}.mp3'
@@ -162,14 +165,12 @@ def upload_to_archive_org(audio_path: Path, episode_num: str) -> tuple[str, int]
     item = ia.get_item(config.IA_ITEM_NAME)
     
     # Upload the file
-    r = item.upload_file(str(audio_path), file_metadata={
-        'mediatype': 'audio',
-        'collection': 'podcasts',
-        'title': f'Our News Podcast (Unofficial) - Episode {episode_num}',
-        'date': datetime.datetime.now().strftime('%Y-%m-%d'),
-        'creator': 'Charles M',
-        'language': 'English',
-    }, rename=audio_filename, access_key=config.IA_ACCESS_KEY, secret_key=config.IA_SECRET_KEY)
+    r = item.upload_file(
+        str(audio_path),
+        key=audio_filename,
+        access_key=config.IA_ACCESS_KEY,
+        secret_key=config.IA_SECRET_KEY
+    )
     
     r.raise_for_status()
     
@@ -180,11 +181,12 @@ def upload_to_archive_org(audio_path: Path, episode_num: str) -> tuple[str, int]
 
 def create_episode_artifact(episode_num: str, original_item: ET.Element, edited_audio_path: Path):
     folder_path = config.PATH_TO_EPISODES / episode_num
-    folder_path.mkdir(parents=True, exist_ok=True)
     
     # Upload audio to archive.org
     print(f'Uploading episode {episode_num} to archive.org...')
     archive_url, file_size = upload_to_archive_org(edited_audio_path, episode_num)
+
+    folder_path.mkdir(parents=True, exist_ok=True)
     
     # Construct isolated RSS item tag block
     rss_attrs = {'version': '2.0'} | {f'xmlns:{key}': val for key, val in config.NAMESPACES.items()}
@@ -282,7 +284,7 @@ def process_latest_podcast(skip_execute_check: bool):
             'duration_secs': utterance['duration_ms'] / 1000
         } for utterance in transcription.get('utterances', [])]
 
-        print(transcription)
+        print(utterances, '\n')
 
         if utterances == []:
             raise ValueError('Missing utterances in transcription response')
@@ -296,14 +298,14 @@ def process_latest_podcast(skip_execute_check: bool):
         if not keep_segments:
             raise ValueError('No valid segments returned from Deepseek')
         
-        print(keep_segments)
+        print(keep_segments, '\n')
 
         print('Slicing linear audio tracks...')
         edit_audio(temp_input, temp_output, keep_segments)
 
         print('Writing distribution files directly to target branch workspace...')
         create_episode_artifact(str(episode_num), latest_entry, temp_output)
-        
+
         update_state(success=True)
         print(f'Successfully processed episode {episode_num}')
         

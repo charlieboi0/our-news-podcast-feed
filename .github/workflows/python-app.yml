@@ -47,6 +47,8 @@ jobs:
       env:
         MODULATE_API_KEY: ${{ secrets.MODULATE_API_KEY }}
         DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        IA_ACCESS_KEY: ${{ secrets.IA_ACCESS_KEY }}
+        IA_SECRET_KEY: ${{ secrets.IA_SECRET_KEY }}
       run: |
         if [ "${{ github.event.inputs.disable_execute_check }}" = "true" ]; then
           python -u main.py --disable-execute-check
