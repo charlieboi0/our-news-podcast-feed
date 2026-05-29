@@ -22,8 +22,8 @@ def require_env(name: str) -> str:
 
 MODULATE_API_KEY = require_env("MODULATE_API_KEY")
 DEEPSEEK_API_KEY = require_env("DEEPSEEK_API_KEY")
-IA_ACCESS_KEY = require_env("IA_ACCESS_KEY")
-IA_SECRET_KEY = require_env("IA_SECRET_KEY")
+IA_ACCESS_KEY = require_env("IA_ACCESS_KEY_ID")
+IA_SECRET_KEY = require_env("IA_SECRET_ACCESS_KEY")
 
 IA_ITEM_NAME = 'our-news-podcast-unofficial'
 

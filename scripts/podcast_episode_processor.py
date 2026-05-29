@@ -155,13 +155,8 @@ def upload_to_archive_org(audio_path: Path, episode_num: str) -> tuple[str, int]
     """
     Upload audio to archive.org and return (archive_url, file_size)
     """
-    if not config.IA_ACCESS_KEY or not config.IA_SECRET_KEY:
-        raise RuntimeError(
-            'Archive.org upload is disabled because IA_ACCESS_KEY and IA_SECRET_KEY are not set. '
-            'Set these as GitHub repository secrets or in scripts/.env.'
-        )
 
-    ia.configure(config.IA_ACCESS_KEY, config.IA_SECRET_KEY)
+    # ia.configure(config.IA_ACCESS_KEY, config.IA_SECRET_KEY)
     
     audio_filename = f'episode_{episode_num}.mp3'
     
@@ -271,6 +266,7 @@ def process_latest_podcast(skip_execute_check: bool):
     temp_input = Path('temp_input.mp3')
     temp_output = Path('temp_output.mp3')
     
+    error = None
     try:
         print(f'Downloading episode {episode_num}...')
         with requests.get(audio_url, stream=True, timeout=180) as r:
@@ -313,10 +309,14 @@ def process_latest_podcast(skip_execute_check: bool):
         print(f'Successfully processed episode {episode_num}')
         
     except Exception as e:
-        print(f'Pipeline error: {e}')
+        print(f'Pipeline error:')
+        error = e
         update_state(success=False)
     finally:
         if temp_input.exists():
             temp_input.unlink()
         if temp_output.exists():
             temp_output.unlink()
+
+    if error:
+        raise error
