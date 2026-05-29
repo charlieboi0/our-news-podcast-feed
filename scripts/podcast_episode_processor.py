@@ -156,7 +156,10 @@ def upload_to_archive_org(audio_path: Path, episode_num: str) -> tuple[str, int]
     Upload audio to archive.org and return (archive_url, file_size)
     """
     if not config.IA_ACCESS_KEY or not config.IA_SECRET_KEY:
-        raise RuntimeError('IA_ACCESS_KEY and IA_SECRET_KEY are required for archive.org upload')
+        raise RuntimeError(
+            'Archive.org upload is disabled because IA_ACCESS_KEY and IA_SECRET_KEY are not set. '
+            'Set these as GitHub repository secrets or in scripts/.env.'
+        )
 
     ia.configure(config.IA_ACCESS_KEY, config.IA_SECRET_KEY)
     

@@ -14,10 +14,17 @@ TARGET_MINUTE = 15
 
 SOURCE_FEED_URL = "https://example.com/source-local-news-feed.xml"
 
-MODULATE_API_KEY = os.getenv("MODULATE_API_KEY")
-DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
-IA_ACCESS_KEY = os.getenv("IA_ACCESS_KEY")
-IA_SECRET_KEY = os.getenv("IA_SECRET_KEY")
+def require_env(name: str) -> str:
+    value = os.getenv(name)
+    if not value:
+        raise ValueError(f"Environment variable {name} is required.")
+    return value
+
+MODULATE_API_KEY = require_env("MODULATE_API_KEY")
+DEEPSEEK_API_KEY = require_env("DEEPSEEK_API_KEY")
+IA_ACCESS_KEY = require_env("IA_ACCESS_KEY")
+IA_SECRET_KEY = require_env("IA_SECRET_KEY")
+
 IA_ITEM_NAME = 'our-news-podcast-unofficial'
 
 NAMESPACES = {
