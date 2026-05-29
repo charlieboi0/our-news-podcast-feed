@@ -3,7 +3,7 @@ A RSS feed for an edited version of the Our News Podcast (unofficial)
 
 ## GitHub Pages RSS Feed
 
-The RSS feed for this podcast is available at `https://charlieboi0.github.io/our-news-podcast-feed/feed.xml`
+The RSS feed for this podcast is available at [https://charlieboi0.github.io/our-news-podcast-feed/feed.xml](https://charlieboi0.github.io/our-news-podcast-feed/feed.xml)
 
 ## Listening with RSS-friendly podcast apps
 
