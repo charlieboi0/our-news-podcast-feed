@@ -83,12 +83,14 @@ def update_state(success: bool):
 def transcribe_audio(audio_path: Path) -> list:
     headers = {'X-API-Key': config.MODULATE_API_KEY}
     with open(audio_path, 'rb') as f:
+        MINUTES = 60
+
         response = requests.post(
             'https://modulate-developer-apis.com/api/velma-2-stt-batch', 
             headers=headers, 
             files={'upload_file': f},
             data={'speaker_diarization': 'true'},
-            timeout=300
+            timeout=8*MINUTES
         )
     response.raise_for_status()
     return response.json()
@@ -103,11 +105,12 @@ def get_edit_segments(word_timestamps: list) -> tuple[str | None, list]:
         'Review the provided transcription json with utterances and their timestamps.'
         'Identify and exclude these segments: weather segments, the \'World Focus\' '
         'segment, the \'This day in history\' segment, duplicate sports segments, and '
-        'commercials. In addition, generate an new title for the edited podcast. '
-        'The title should briefly summarize the most important stories and be no '
-        'longer than 40 characters. Return a JSON object representing the new title and '
-        'the valid content segments to KEEP. All timestamps should be in seconds and '
-        'everything should be properly sorted. Format:\n'
+        'commercials. NEVER cut the show open or story previews. Be conservative in your '
+        'edits and never cut more than is necessary. In addition, generate an new title '
+        'for the edited podcast. The title should briefly summarize the most important '
+        'stories and be no longer than 40 characters. Return a JSON object representing '
+        'the new title and the valid content segments to KEEP. All timestamps should be '
+        'in seconds and everything should be properly sorted. Format:\n'
 
         '{\n'
         '    "title": string,\n'
@@ -283,7 +286,7 @@ def process_latest_podcast(skip_execute_check: bool):
             'duration_secs': utterance['duration_ms'] / 1000
         } for utterance in transcription.get('utterances', [])]
 
-        print(utterances, '\n')
+        print(str(utterances), '\n')
 
         if utterances == []:
             raise ValueError('Missing utterances in transcription response')
@@ -297,7 +300,8 @@ def process_latest_podcast(skip_execute_check: bool):
         if not keep_segments:
             raise ValueError('No valid segments returned from Deepseek')
         
-        print(keep_segments, '\n')
+        print(new_title)
+        print(str(keep_segments), '\n')
 
         print('Slicing linear audio tracks...')
         edit_audio(temp_input, temp_output, keep_segments)
