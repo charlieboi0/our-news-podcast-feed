@@ -27,15 +27,21 @@ def add_to_feed():
 
     # Check for discrepancies between folder and xml
     episode_folders = sorted(os.listdir(PATH_TO_EPISODES))
-    missing_xml_episode_ids = list(filter(
-        lambda folder_id: folder_id not in xml_episode_ids,
-        episode_folders
-    ))
+    missing_xml_episode_ids = [
+        folder_id for folder_id in episode_folders
+        if folder_id not in xml_episode_ids
+    ]
 
     # Add folder/podcast metadata to feed.xml
     for folder in missing_xml_episode_ids:
         metadata_path = PATH_TO_EPISODES / folder / 'metadata.xml'
+        if not metadata_path.exists():
+            print(f'Warning: skipping episode {folder} because {metadata_path} is missing')
+            continue
         metadata = ET.parse(metadata_path).find('item')
+        if metadata is None:
+            print(f'Warning: episode {folder} metadata.xml is malformed or missing <item>')
+            continue
         xml_channel.append(metadata)
 
 
