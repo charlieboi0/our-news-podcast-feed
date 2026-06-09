@@ -95,7 +95,7 @@ def transcribe_audio(audio_path: Path) -> list:
     response.raise_for_status()
     return response.json()
 
-def get_edit_segments(word_timestamps: list) -> tuple[str | None, list]:
+def get_new_title_and_edit_segments(word_timestamps: list) -> tuple[str | None, list]:
     """
     Returns a tuple of (new_title, list of segments to keep) based on the provided word timestamps.
     """
@@ -105,8 +105,7 @@ def get_edit_segments(word_timestamps: list) -> tuple[str | None, list]:
         'Review the provided transcription json with utterances and their timestamps.'
         'Identify and exclude these segments: weather segments, the \'World Focus\' '
         'segment, the \'This day in history\' segment, duplicate sports segments, and '
-        'commercials. NEVER cut the show open or story previews. Be conservative in your '
-        'edits and never cut more than is necessary. In addition, generate an new title '
+        'commercials. Always start at timestamp 0.00. In addition, generate an new title '
         'for the edited podcast. The title should briefly summarize the most important '
         'stories and be no longer than 40 characters. Return a JSON object representing '
         'the new title and the valid content segments to KEEP. All timestamps should be '
@@ -281,6 +280,7 @@ def process_latest_podcast(skip_execute_check: bool):
         print('Transcribing via Modulate Velma API...')
         transcription = transcribe_audio(temp_input)
         utterances = [{
+            'speaker': utterance['speaker'],
             'text': utterance['text'],
             'start_secs': utterance['start_ms'] / 1000,
             'duration_secs': utterance['duration_ms'] / 1000
@@ -292,10 +292,11 @@ def process_latest_podcast(skip_execute_check: bool):
             raise ValueError('Missing utterances in transcription response')
 
         print('Isolating content gaps with DeepSeek...')
-        new_title, keep_segments = get_edit_segments(utterances)
+        new_title, keep_segments = get_new_title_and_edit_segments(utterances)
 
-        latest_title_elem = latest_entry.find('title')
-        latest_title_elem.text = new_title if new_title else latest_title_elem.text
+        title_elem = latest_entry.find('title')
+        itunes_title_elem = latest_entry.find('itunes:title', namespaces=config.NAMESPACES)
+        title_elem.text = itunes_title_elem.text = new_title if new_title else title_elem.text
 
         if not keep_segments:
             raise ValueError('No valid segments returned from Deepseek')
